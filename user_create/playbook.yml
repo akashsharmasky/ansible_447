@@ -1,10 +1,9 @@
 - name: creating users with random password
-  hosts: db
+  hosts: all
   become: yes
   vars_files:
   - users.yml
   vars:
-  # - password: "{{ lookup('password', 'credentials/' '/mysqlpassword length=15') }}"
   - password:  "{{ lookup('password', '' + './{{ item.name }}-password.txt length=6') }}"
   tasks:
 
