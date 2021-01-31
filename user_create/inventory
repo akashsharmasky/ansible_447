@@ -1,4 +1,4 @@
 [web]
-localhost
+node1
 [db]
-192.168.122.152
+node2
